@@ -1,0 +1,15 @@
+zoo> db.animals.insertOne({
+   name: "Leo",
+   age: 7,
+   gender: "Male",
+   species: "Lion",
+   habitat: "Savanna",
+   birthplace: "Masai Mara, Kenya",
+   parents: [
+     { name: "Unknown", gender: "Male" },
+     { name: "Unknown", gender: "Female" }
+   ],
+   caretakers: [
+     { idCaretaker: 501, nameCaretaker: "Jake Adams" }
+   ]
+ })

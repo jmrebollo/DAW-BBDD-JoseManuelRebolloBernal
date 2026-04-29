@@ -1,0 +1,2 @@
+zoo> show dbs
+zoo> show collections

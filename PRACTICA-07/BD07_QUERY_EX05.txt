@@ -1,0 +1,6 @@
+zoo> db.animals.find({
+  $and: [
+    { habitat: "Rainforest" },
+    { "caretakers.nameCaretaker": "Emily Brown" }
+  ]
+})

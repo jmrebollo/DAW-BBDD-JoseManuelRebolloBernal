@@ -1,0 +1,4 @@
+zoo> db.animals.aggregate ( [ 
+{$group: { _id: "$species", 
+count: { $sum: 1 } } } 
+] )

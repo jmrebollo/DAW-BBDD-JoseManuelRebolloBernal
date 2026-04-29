@@ -1,0 +1,4 @@
+zoo> db.animals.updateOne ( 
+{ name: "Leo" }, 
+{$set: { age: 8 } }
+ )

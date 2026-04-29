@@ -1,0 +1,17 @@
+zoo> db.animals.aggregate([
+   { $unwind: "$caretakers" },
+   { $group: {
+       _id: "$caretakers.idCaretaker",
+       nameCaretaker: { $first: "$caretakers.nameCaretaker" },
+       animals: { $push: "$name" }
+     }
+   },
+   { $project: {
+       _id: 0,
+       idCaretaker: "$_id",
+       nameCaretaker: 1,
+       animals: 1
+     }
+   },
+   { $out: "Caretakers" }
+ ])
